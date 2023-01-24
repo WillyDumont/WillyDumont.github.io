@@ -1,0 +1,553 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<title>Acceuil</title>
+<link rel="shortcut icon" href="C:\Users\willy\Documents\Site web\Elements\logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <div class="sample-header">
+  <div class="sample-header-section"> 
+  <h3 class="Titre">Willy Dumont</h3> 
+ <ul class="niveau1">
+    <li><a href="#" id="togg1" class="animation">Accueil</a></li>
+    <li><a href="C:\Users\willy\Documents\Site web\Code source\test.html">Message</a></li>
+    <li ><a href="C:\Users\willy\Documents\Site web\Code source\Newsletter.html">Contact</a></li>
+    <li><a href="C:\Users\willy\Documents\Site web\Code source\liens\cv.html">mon CV</a></li>
+ </ul>
+</div>
+</div>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+var closeButton = document.getElementById("close-button");
+var messageBox = document.getElementById("message-box");
+var arrierPlan = document.getElementById("message-box-arr");
+
+closeButton.addEventListener("click", function() {
+messageBox.style.display = "none";
+arrierPlan.style.display = "none";
+});
+
+var hiddenTexts = document.querySelectorAll(".hidden-text");
+var revealPoint = 100; // point où le texte caché doit être révélé en pixels
+var currentIndex = 0;
+
+window.addEventListener("scroll", function() {
+if (window.pageYOffset > revealPoint) {
+hiddenTexts.forEach(function(hiddenText, index) {
+if (index < currentIndex) return;
+hiddenText.style.visibility = "visible";
+hiddenText.style.opacity = 1;
+hiddenText.style.transform = "translateX(0%)";
+});
+currentIndex = hiddenTexts.length;
+}
+});
+var hiddenTexts = document.querySelectorAll(".hidden-text");
+var revealPoint = 100; // point où le texte caché doit être révélé en pixels
+var currentIndex = 0;
+
+// vérifie si c'est la première visite du site
+if (!localStorage.getItem("visited")) {
+  localStorage.setItem("visited", true);
+
+  window.addEventListener("scroll", function() {
+    if (window.pageYOffset > revealPoint) {
+      hiddenTexts[currentIndex].style.visibility = "visible";
+      hiddenTexts[currentIndex].style.opacity = 1;
+      hiddenTexts[currentIndex].style.transform = "translateX(0%)";
+      currentIndex++;
+    }
+  });
+}
+ </script>
+
+<div id="d1">
+  <div class="img-blockd1">
+    <h2 class="img-blockd1-text">Quelques explications...</h2>
+  <div class="box color">
+    <div class="a">Profil</div>
+    <div class="a2">Dans cette section, je décris mon envie de devenir ingénieur, je partage ce qui m'attire et ma vision pour l'avenir.</div>
+    <a href="#Objectif" class="arrow-container">
+    <img src="C:\Users\willy\Documents\Site web\Elements\Flèche1.png" class="arrow" alt="Mon bouton">
+    <div class="text-reveal">Accéder à la section</div>
+    </a>
+  </div>
+  <div class="box color">
+    <div class="a">Formation</div>
+    <div class="a2">Ici, je détaille mon parcours académique, en commençant par mon Baccalauréat Technologique et en finissant par la prépa intégrée de Polytech.</div>
+    <a href="#Formation" class="arrow-container">
+      <img src="C:\Users\willy\Documents\Site web\Elements\Flèche1.png" class="arrow" alt="Mon bouton">
+      <div class="text-reveal">Accéder à la section</div>
+    </a>
+  </div>
+  <div class="box color">
+    <div class="a">Expériences<br>professionelles</div>
+    <div class="a2">Ensuite, je vous présente mes expériences professionnelles, en décrivant les compétences et les connaissances que j'ai acquises.</div>
+    <a href="#Expériences_professionnelles" class="arrow-container">
+      <img src="C:\Users\willy\Documents\Site web\Elements\Flèche1.png" class="arrow" alt="Mon bouton">
+      <div class="text-reveal">Accéder à la section</div>
+    </a>
+    </div>
+    <div class="box color">
+    <div class="a">Apprentissage</div>
+    <div class="a2">Découvrez en détail toutes les expériences que j'ai développées, les compétences que j'ai acquises, les domaines de connaissances que je maîtrise et celles qui m'intéressent.</div>
+    <a href="#Expériences" class="arrow-container">
+    <img src="C:\Users\willy\Documents\Site web\Elements\Flèche1.png" class="arrow" alt="Mon bouton">
+    <div class="text-reveal">Accéder à la section</div>
+    </a>
+    </div>
+    <div class="box color">
+    <div class="a">Projets</div>
+    <div class="a2">Et enfin je vous présente les projets que j'ai réalisés et ceux que je suis en train de développer.</div>
+    <a href="#Projets" class="arrow-container">
+      <img src="C:\Users\willy\Documents\Site web\Elements\Flèche1.png" class="arrow" alt="Mon bouton">
+      <div class="text-reveal">Accéder à la section</div>
+    </a>
+  </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+const arrowContainer = document.getElementById("arrow-container");
+const arrow = arrowContainer.querySelector(".arrow");
+const textReveal = arrowContainer.querySelector(".text-reveal");
+
+arrowContainer.addEventListener("mouseover", function () {
+    arrow.style.left = "50%";
+    textReveal.style.left = "0%";
+});
+
+arrowContainer.addEventListener("mouseout", function () {
+    arrow.style.left = "0%";
+    textReveal.style.left = "100%";
+});
+
+</script>
+<script type="text/javascript">
+  let togg1 = document.getElementById("togg1");
+let d1 = document.getElementById("d1");
+togg1.addEventListener("click", () => {
+  if(getComputedStyle(d1).display != "none"){
+    d1.style.display = "none";
+  } else {
+    d1.style.display = "block";
+  }
+})
+</script>
+
+  <div style="margin-bottom: 70px;"></div>
+
+<h2 class="espace" id="Objectif">Pourquoi devenir Ingenieur</h2>
+
+<div class="app-blockd1-part">
+  <div class="app-blockd1-text-part">
+    <p>Pour moi, devenir ingénieur c'est avoir l'opportunité de participer à l'innovation.</p>
+    <p>Depuis toujours, je suis fasciné par le domaine automobile et aéronautique, je m'interesse au monde de la performance, de la competition et de l'endurance. Ma passion pour le monde de l'automobile est profonde et je suis constamment à la recherche de nouvelles connaissances sur ces sujets.</p>
+    <p>Je suis convaincu que devenir ingénieur me permettra de travailler dans ces domaines en constante évolution. Mettre en pratique mes connaissances pour développer des technologies plus performantes, plus éco-responsables et plus innovantes qui permettront de répondre aux défis actuels et futurs de ces domaines.</p>
+    <p>En somme, devenir ingénieur, c'est pour moi l'occasion de combiner mon envie de travailler dans l'innovation de l'automobile et aéronautique, avec mon désir de mettre mon savoir-faire au service de mes valeurs.</p>
+  </div>
+</div>
+<div class="album">
+  <img class="photo" src="C:\Users\willy\Documents\Site web\Images\auto5.jpg">
+  <img class="photo" src="C:\Users\willy\Documents\Site web\Images\auto4.jpg">
+  <img class="photo" src="C:\Users\willy\Documents\Site web\Images\auto3.jpg">
+  <div class="img-block"><p style="text-align: center; color: white;">Quelques cliché de moi posant devant : (de gauche a droite) une ..... au salon "Epoqu'auto" en 2022 à Lyon, puis une peugot CD SP66 de 1960 et une porsche 944 Gulf toute deux ayant participé au 24h du mans, et exposé au musé du même nom. Et enfin une bmw préparer par ....</p></div>
+  <img class="photo" src="C:\Users\willy\Documents\Site web\Images\auto6.jpg">
+</div>
+
+  <a href="https://www.linkedin.com/in/willy-dumont" class="mon-bouton espace20" target="_blank">Mon Linkedln</a>
+
+<div style="margin-bottom: 70px;"></div>
+
+<h2 id="Formation" class="espace">Formation</h2>
+<div class="app-blockd1-part">
+  <div class="app-blockd1-text-part">
+    <p>En 2021, j'ai obtenu mon baccalauréat technologique option innovation technologique et éco-conception. Au cours de mon parcours, j'ai travaillé sur Solidworks, Catia et développé des programmes en Python en participant à de nombreux projets de groupe. En parallèle de mes études au lycée, j'ai suivi une formation et obtenu mon brevet d'initiation aéronautique.</p>
+
+    <p>Poursuivant dans le domaine de l'innovation, j'ai commencé l'année dernière une licence sciences pour l'ingénieur intégrée au réseau Polytech de Lyon. Ce cursus comprend des cours de mathématiques, de sciences de l'ingénieur, de programmation et de physique, avec de nombreux projets de groupe qui me permettent de traiter efficacement les sujets techniques.</p>
+    <p>Dans ma classe, je suis reconnu pour mon esprit d'équipe, ma curiosité, ma motivation ainsi que mon intérêt pour les défis techniques.</p>
+  </div>
+</div>
+<div class="album">
+  <img class="photo2" src="C:\Users\willy\Documents\Site web\Elements\polytech.png">
+  <img class="photo2" src="C:\Users\willy\Documents\Site web\Elements\schéma2.png">
+  <img class="photo2" src="C:\Users\willy\Documents\Site web\Elements\UJM.png">
+</div>
+
+  <a href="https://www.polytech-reseau.org/" class="mon-bouton espace20" target="_blank">Lien vers Polytech</a>
+  <a href="https://www.univ-st-etienne.fr/fr/index.html" class="mon-bouton espace20" target="_blank">Lien vers l'Université Jean Monnet</a>
+
+<h2 id="Expériences_professionnelles" class="espace">Expériences professionnelles</h2>
+<div class="app-blockd1-part">
+  <div class="app-blockd1-text-part">
+    <p>J'ai réalisé plusieurs stages dans des entreprises de différents secteurs, ce qui m'a donné une vision globale du monde professionnel. Les différentes expériences que j'ai eues ont toutes été enrichissantes. J'ai observé les processus de travail, j'ai appris de nouvelles compétences et j'ai pu échanger. Ce qui m'a donné envie de découvrir de nouveaux environnements, de faire de nouvelles rencontres et d'acquérir de nouvelles compétences.</p>
+  </div>
+</div>
+<div id="App">
+  <div class="app-blockd1">
+    <h2 class="app-blockd1-text">Expériences</h2>
+  <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container" href="https://www.sabenatechnics.com/" target="_blank">
+            <img src="C:\Users\willy\Documents\Site web\Elements\sabena.png" class="img-app mon-bouton-app2">
+          </a>
+      </div>
+      <div class="b" style="margin-right: 2%;">Sabena Technics</div>
+      <div class="b2">En Août 2022, j'ai travaillé pendant un mois dans l'entreprise de maintenance aéronautique Sabena Technicsà Dinard. J'était chargé d'effectuer les entrées et sorties d'équipements aéronautiques (ATR72 - ATR42 - Fokker 100 - A320 - CASA CN-235)et de supervisé la gestion informatique du suivi de ces équipements.
+      <div style="color: grey;">Cliquer sur l'image</div></div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\décathlon.png" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right:11% ;">Decathlon</div>
+      <div class="b2">J'ai travaillé deux mois dans l'entreprise Decathlon en tant qu'employé de rayonnage et vendeur. Cette expérience m'a permis de découvrir le fonctionnement d'une grande entreprise de distribution et de comprendre les enjeux liés à la gestion des stocks et à la satisfaction des clients.</div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\cahier.png" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right:2%;">Cours particulier</div>
+      <div class="b2">J'ai accompagner scolairement des élèves dans diverses matières telles que les mathématiques, la physique et la chimie. Je les ai aider à comprendre et approffondir leurs matières. Ces expériences m'on permisent de découvrir les enjeux liés à l'enseignement et de développer mes compétences pédagogique.</div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\renov.jpg" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right: 9%;">Rénovation</div>
+      <div class="b2">J'ai de nombreuses fois aider mon père à effectuer la rénovation d'appartements. Ces éxperiences m'on permis de découvrir les étapes nécessaires a la rénovation, de la planification jusqu'au finitions. J'ai également pu développer mes compétences en bricolage et rénovation, en utilisant différents outils et matériaux. J'ai également appris à travailler en équipe et communiquer efficacement afin de respecter les delais.</div>
+    </div>
+  </div>
+</div>
+
+<h2 id="Expériences" class="espace">Apprentissage</h2>
+<div class="app-blockd1-part">
+  <div class="app-blockd1-text-part">
+    <p>Au cours de ma scolarité, j'ai développé des compétences dans divers domaines et en dehors de mes études, j'ai acquis d'autres compétences. Pour vous les présenter de manière claire, je les ai regroupées en six catégories : bureautique, développement web, optimisation/développement, multimédia, langues et jeux.</p>
+    <p>Je vais vous expliquer comment j'ai développé ces compétences, pourquoi elles sont importantes pour moi et comment je compte m'en servir dans mon parcours professionnel.</p>
+  </div>
+</div>
+<div id="App">
+  <div class="app-blockd1">
+    <h2 class="app-blockd1-text">Bureautique</h2>
+
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container" href="C:\Users\willy\Documents\Site web\Code source\liens\Excel.html">
+            <img src="C:\Users\willy\Documents\Site web\Elements\Excel.png"  class="img-app mon-bouton-app2" >
+          </a>
+      </div>
+      <div class="b" style="margin-right: 20%;">Excel</div>
+      <div class="b2">J'ai des compétences dans l'utilisation d'Excel, telles que la création de tableaux, la manipulation de données et la mise en forme de feuilles de calcul. J'ai suivi des formations en ligne pour renforcer mes acquis et découvrir des fonctionalités. Je pratique de la programmation avec des scripts VBA.
+      <div style="color: grey;">Cliquer sur l'image</div></div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\office.webp" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right:10% ;">Pack Office</div>
+      <div class="b2">J'utilise régulierement les différentes applications du pack Office de Microsoft, telles que Word, Excel, PowerPoint et Outlook. Je suis en mesure de réaliser des documents professionnels, des tableaux de calculs, des présentations et des communications électroniques.</div>
+    </div>
+
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container" href="C:\Users\willy\Documents\Site web\Code source\liens\pix.html">
+            <img src="C:\Users\willy\Documents\Site web\Elements\PIX.png" class="img-app mon-bouton-app2">
+          </a>
+      </div>
+      <div class="b" style="margin-right:22%;">PIX</div>
+      <div class="b2">J'ai obtenu la certification PIX qui atteste mon niveau d'utilisation de l'ordinateur. Elle evalue mes compétences en matière de systèmes d'exploitation, de bureautique, de communication et de sécurité informatique.<div style="color: grey;">Cliquer sur l'image</div></div>
+    </div>
+  </div>
+  <div class="app-blockd1">
+    <h2 class="app-blockd1-text">Developpement web</h2>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container" href="https://www.codecademy.com/profiles/WillyDumont" target="_blank">
+            <img src="C:\Users\willy\Documents\Site web\Elements\code-cad.png" class="img-app mon-bouton-app2">
+          </a>
+      </div>
+      <div class="b" style="margin-right:6%;">Code Cademy</div>
+      <div class="b2">Je participe quelques fois aux cours sur Code Academy, j'apprécie l'interface intuitive et les mises en situation pratiques. Les cours m'ont permis de développer mes compétences en programmation avec des langages tels que Python, JavaScript et HTML/CSS.
+      <div style="color: grey;">Cliquer sur l'image</div></div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container"href="https://leetcode.com/Newone24/" target="_blank">
+            <img src="C:\Users\willy\Documents\Site web\Elements\leetcode.png"class="img-app mon-bouton-app2">
+          </a>
+      </div>
+      <div class="b" style="margin-right: 12%;">Leet Code</div>
+      <div class="b2">J'utilise également LeetCode, qui propose plus de défis en ligne avec des exercices sur des sujets variés comme des algorithmes, des structures de données et la gestion de bases de données. Je trouve cette plateforme complèmentaire à Code Academy.
+      <div style="color: grey;">Cliquer sur l'image</div></div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\html.jfif" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right:6%;">HTML/CSS/JS</div>
+      <div class="b2">Je possède des compétences en HTML/CSS/JS, preuve en est ce site. Je maitrise les trois langages sont incontournables a la création de sites web. J'ai appris à les utiliser en suivant des cours en ligne et avec des projets personnels.</div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\python.jpg" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right:17%;">Python</div>
+      <div class="b2">En Python, je code de temps en temps des scripts automatisés où des programmes de calculs. J'ai appris à utiliser Python en cours, en suivant des cours en ligne et en expérimentant aussi avec des projets personnels.
+      <div style="color: grey;">Cliquer sur l'image</div></div>
+    </div>
+  </div>
+  <div class="app-blockd1">
+    <h2 class="app-blockd1-text">Optimisation - Développement</h2>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\matlab.png" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right:17%;">Matlab</div>
+      <div class="b2">Je possède également des compétences en Matlab, je l'utilise en cours pour créer des programmes de calculs, des simulations ou des visualisations de données. Je n'ai pas vraiment d'application a utiliser, mais j'ai des bases.</div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\solidworks.png" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right: 11%;">Solidworks</div>
+      <div class="b2">Ce logiciel de CAO m'a grandement servi au lycée lors de créations 3D pour des projets, avec quelques fois des impressions pour pouvoir manipuler les pieces. J'adore imaginer et modéliser des pièces en plusieurs dimensions.</div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\Chat-GPT.png" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right: 14%;">Chat-GPT</div>
+      <div class="b2">Je me suis familiarisé avec ChatGPT, un outil revolutionnaire que j'essai d'utiliser inteligement. J'ai experimenter ChatGPT grace à son API et grâce a des tutoriels en ligne. Je pense que ce sera un atoût important dans le milieu professionel.</div>
+    </div>
+  </div>
+  <div class="app-blockd1">
+    <h2 class="app-blockd1-text">Multimedia</h2> 
+    <div class="box-app color-app">
+    <div class="box-app-int color-app-int">
+          <a class="img-app-container" href="C:\Users\willy\Documents\Site web\Code source\liens\podcasts.html">
+            <img src="C:\Users\willy\Documents\Site web\Elements\podcasts.png" class="img-app mon-bouton-app2">
+          </a>
+      </div>
+      <div class="b" style="margin-right: 14%;">Podcasts</div>
+      <div class="b2">J'adore écouter des podcasts sur l'actualité, les sciences, la technologie, la culture et l'économie. C'est une source d'inspirations et d'apprentissages. Certains contenu me permettent de me tenir informé sur les dernières tendances et d'autres de découvrir des nouveaux sujets.
+      <div style="color: grey;">Cliquer sur l'image</div></div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container" href="C:\Users\willy\Documents\Site web\Code source\liens\ted talks.html">
+            <img src="C:\Users\willy\Documents\Site web\Elements\ted.jpg" class="img-app mon-bouton-app2">
+          </a>
+      </div>
+      <div class="b" style="margin-right: 14%;">TED Talks</div>
+      <div class="b2">J'adore visionner des TED Talks, c'est le moyen d'écouter des conférences avec des intervenants sur des sujets passionants. Les contenus sont inspirants. Le format permet de découvrir de nouvelles idées et perspectives.<div style="color: grey;">Cliquer sur l'image</div></div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container" href="C:\Users\willy\Documents\Site web\Code source\liens\youtube.html">
+            <img src="C:\Users\willy\Documents\Site web\Elements\youtube.png" class="img-app mon-bouton-app2" >
+          </a>
+      </div>
+      <div class="b" style="margin-right: 14%;">Youtube</div>
+      <div class="b2">Youtube est un reseau social que j'utilise quotidiennement, il y a enormement de contenu et je visionne beaucoup de contenue pour m'instruire, me former et apprendre<div style="color: grey;">Cliquer sur l'image</div></div>
+    </div>
+  </div>
+  <div class="app-blockd1">
+    <h2 class="app-blockd1-text">Langues</h2>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\voltaire.jpg" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right: 7%;">Projet Voltaire</div>
+      <div class="b2">Le projet Voltaire a été pour moi un moyen de réviser les bases en français et d'améliorer mon niveau en révisant les règles grammaticales, de travailler la syntaxe, la conjugaison et l'orthographe.</div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\babbel.png"class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right: 17%;">Babbel</div>
+      <div class="b2">Babbel est une application pour travailler son anglais, je trouve cette application plus avancée, avec une approche orientée professionnelle. J'essaie de l'utiliser tous les jours pour améliorer mon niveau d'anglais.</div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\duolingo.png" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right: 14%;">Duolingo</div>
+      <div class="b2">Duolingo est une application que j'utilisais quotidiennement durant l'année 2022. J'ai senti une réelle amélioration de mon vocabulaire grâce à la progression dans les niveaux.</div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\global.jpeg" class="img-app" >
+          </a>
+      </div>
+      <div class="b" style="margin-right: 8%;">Global EXAM</div>
+      <div class="b2">Global Exam est une application que j'utilise à l'université, elle vient en complément de l'anglais scolaire. J'ai l'intention de passer le TOEIC avec cette application.</div>
+    </div>
+  </div>
+  <div class="app-blockd1">
+    <h2 class="app-blockd1-text">Jeux</h2>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container"href="https://online-go.com/player/1275796/" target="_blank">
+            <img src="C:\Users\willy\Documents\Site web\Elements\ogs.jpg"class="img-app mon-bouton-app2">
+          </a>
+      </div>
+      <div class="b" style="margin-right: 12%;">Jeu de Go</div>
+      <div class="b2">Le jeu de Go est un jeu que j'essaie d'apprendre. Les coups sont nombreux et les possibilités presque infinies, cela me permet de me challenger et peut-être un jour de battre Alpha Go.</div>
+    </div>
+    <div class="box-app color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container" href="https://lichess.org/@/Skwill/" target="_blank">
+            <img src="C:\Users\willy\Documents\Site web\Elements\lichess.avif"  class="img-app mon-bouton-app2">
+          </a>
+      </div>
+      <div class="b" style="margin-right: 17%;">Lichess</div>
+      <div class="b2">Lichess est une plateforme qui me permet de jouer aux échecs. J'apprend les règles et les stratégies. J'apprecie la possibilité d'affronter des joueurs du monde entier permet de voir différents niveaux.</div>
+    </div>
+  </div>
+</div>
+
+<h2 id="Projets" class="espace">Projets</h2>
+<div class="app-blockd1-part">
+  <div class="app-blockd1-text-part">
+    <p>Dans cette section, je vais vous présenter les projets que j'ai réalisés, les projets que j'aimerais réaliser à l'avenir, et ceux qui sont actuellement en préparation. Ces projets sont variés et englobes différents domaines tels que l'aéronautique, les voyages et les événements sportifs.</p>
+  </div>
+</div>
+<div id="Projets1">
+  <div class="app-blockd1">
+    <h2 class="app-blockd1-text">Projets</h2>
+    <div class="box-Projets color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container" href="C:\Users\willy\Documents\Site web\Code source\liens\bia.html" >
+            <img src="C:\Users\willy\Documents\Site web\Elements\bia.png"  class="img-app mon-bouton-app2" >
+          </a>
+      </div>
+      <div class="b" style="margin-left: 37%; text-align: center;">Initiation <br> Aéronautique</div>
+      <div class="b2-av">J'ai obtenue mon Brevet d'Initiation Aéronautique. Ce diplôme forme sur les bases de l'aéronautique, de la météorologie, comment fonctionne un aéronef, l'histoire de l'aéronautique et la sécurité de vol. J'ai découvert les différents aspects de l'aéronautique et ai compris le principe de vol un aéronef grâce à l'aérodynamique.</div>
+    </div>
+    <div class="box-Projets color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\usa.jpg" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right:14% ;">Voyage USA</div>
+      <div class="b2">Nous préparons un voyage aux Etats-Unis avec ma famille. Un road trip en voiture sur la côte ouest des Etats-Unis, en partant de Los Angeles avec des étapes dans des lieux emblématiques tels que le Grand Canyon, Yosemite, La Vallé de Feu et Monument Valley pour finir à San Francisco. Ce voyage sera l'occasion pour nous de d'améliorer notre anglais, de découvrir de nouvelles cultures et de passer du temps ensemble en famille.</div>
+    </div>
+    <div class="box-Projets color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="C:\Users\willy\Documents\Site web\Elements\semi2.jpg" class="img-app">
+          </a>
+      </div>
+      <div class="b" style="margin-right:11% ;">Semi-Marathon</div>
+      <div class="b2">Cet été, j'ai relevé le défi de participer à un semi-marathon. Cela a été un vrai défi pour moi, car c'etait la premiere grande distance que je courais. J'ai consacré 1 mois de préparation physique afin de préparer cet événement, et j'ai réussi à finir la course en 1h50. Cette expérience m'a permis de dépasser mes limites physiques et mentales et de me sentir fier de moi-même.</div>
+    </div>
+     <div class="box-Projets color-app">
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <div class="demo ">
+              <div class="img-app custom-loading-spinner"></div>
+            </div>
+          </a>
+      </div>
+      <div class="b" style="margin-right:20% ;">A venir...</div>
+      <div class="b2">Cette section est en attente de nouveaux projets a réaliser. Comme l'objectif de passer le TOEIC dans les prochains mois.</div>
+    </div>
+  </div>
+</div>
+
+  <a href="https://www.cancalestmalo.fr/informations-pratique/parcours/" class="mon-bouton espace20" target="_blank">Cancale - Saint-Malo</a>
+<h2 class="espace">Activités</h2>
+<div class="app-blockd1-part">
+  <div class="app-blockd1-text-part">
+    <p>Je suis un sportif passionné et j'aime tester de nouvelles activités. J'aime me dépenser en plein air. Parmi les sports que je pratique, il y a l'escalade, la natation qui me permet de me relaxer, le vélo avec des sorties en nature, la course à pied avec des objectifs et un entraînement que je me fixe. Je suis également passionné de sports d'hiver tels que le ski, le ski de fond et la randonnée en raquettes qui me permettent de profiter des paysages enneigés. Enfin, j'aime également les activités plus extrêmes comme la plongée, les vols en avion, le karting, le canoë, le squash et le bateau. Ces activités me permettent de maintenir une forme physique et mentale et de renforcer ma confiance en moi.</p>
+  </div>
+</div>
+<div class="album-act">
+  <img class="photo1" src="C:\Users\willy\Documents\Site web\Images\auto8.JPG">
+  <img class="photo1" src="C:\Users\willy\Documents\Site web\Images\avion2.jpg">
+  <img class="photo1" src="C:\Users\willy\Documents\Site web\Images\triathlon.jpg">
+  <img class="photo1" src="C:\Users\willy\Documents\Site web\Images\escalade1.jpg">
+</div>
+<div class="album-act">
+  <img class="photo-act" src="C:\Users\willy\Documents\Site web\Images\random5.jpg">
+  <img class="photo-act" src="C:\Users\willy\Documents\Site web\Images\random9.jpg">
+  <img class="photo-act" src="C:\Users\willy\Documents\Site web\Images\plongé3.jpg">
+</div>
+<div class="app-blockd1-part">
+  <div class="app-blockd1-text-part">
+    <p>Vous avez maintenant une idée de qui je suis, mes expériences, mes compétences et mes passions. Si vous avez des questions supplémentaires ou si vous souhaitez en savoir plus sur moi, n'hésitez pas à me contacter.</p>
+    <p>J'ai développé plusieurs moyens de me contacter, un mur pour laisser un commentaire visible de tous, ou une section pour m'envoyer un mail.</p>
+  </div>
+</div>
+
+<footer class="footer espace20">
+
+  <div class="container bottom_border">
+    <div class="row">
+      <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">A propos de moi</h5>
+        <p class="mb10">N'hésitez pas a me contacter, je me ferais un plaisir de vous répondre.</p>
+        <p><i class="fa fa-location-arrow"></i> 5 Avenue Gambetta 42300 </p>
+        <p><i class="fa fa-phone"></i>  +33 782276787 </p>
+        <p><i class="fa fa fa-envelope"></i> willy.dumont38@gmail.com  </p>
+      </div>
+      <div class=" col-sm-4 col-md  col-6 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">Interactions</h5>
+        <ul class="footer_ul_amrc">
+          <li><a href="C:\Users\willy\Documents\Site web\Code source\test.html" >Laisser moi un message</a></li>
+          <li><a href="C:\Users\willy\Documents\Site web\Code source\Newsletter.html">Contacter moi</a></li>
+          <li><a href="C:\Users\willy\Documents\Site web\Code source\liens\cv.html">Consulter mon CV</a></li>
+        </ul>
+      </div>
+      <div class=" col-sm-4 col-md  col-6 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">Où me trouver</h5>
+        <ul class="footer_ul_amrc">
+          <li><a href="https://www.linkedin.com/in/willy-dumont" target="_blank">Linkedin</a></li>
+          <li><a href="https://www.instagram.com/willy__dumont/?hl=fr" target="_blank">Instagram</a></li>
+          <li><a href="https://www.allocine.fr/membre-Z20200611094135627130199/" target="_blank">Allociné</a></li>
+        </ul>
+      </div>
+      <div class=" col-sm-4 col-md  col-12 col">
+        <h5 class="headin5_amrc col_white_amrc pt2">Suivez-moi !</h5>
+        <ul class="footer_ul2_amrc">
+          <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>J'aime partager des articles sur twitter, survolez mon compte !<a href="#" target="_blank">https://twitter.com/rxz7777</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
