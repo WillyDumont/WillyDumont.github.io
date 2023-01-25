@@ -632,7 +632,7 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
     justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30%;
+  margin-top: 100px;
   width: 100%;
   text-align: center;
   font-size: 100%;
@@ -679,17 +679,23 @@ position: center;
 p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   /* La marge en haut et en bas de l'élément p est fixée à 8 pixels */
-  margin: 8px 25px 8px 25px;
+  margin: 8px 2% 8px 2%;
   /* Le texte de l'élément p est aligné à gauche */
   text-align: justify;
-  font-size: 65%; /* 2% of the viewport width */
+  font-size: 85%; /* 2% of the viewport width */
+}
+.espace{
+  margin-top: -10%;
+}
+.espace10{
+  margin-bottom: 15%;
 }
 .a { 
-  margin: 3% 0 5% 0;
+  margin-top: 50%;
+  transform: translateY(-50%);
   text-align: center; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
   font-size: 110%; 
-  /* 2% of the viewport width */ 
 }
 .a2 { 
   display: flex; 
@@ -699,6 +705,7 @@ p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
   font-size: 85%; 
   text-align: justify; 
+  visibility: hidden;
 }
 .b { 
   position: relative;
@@ -731,25 +738,74 @@ p {
 #d1{
 margin-left: 5%;
 margin-right: 5%;
-margin-top: 11px;
+margin-top: 20px;
 
 }
 .img-blockd1 {
   margin: 0%;
-  padding-top: 20px;
+  padding-top: 15px;
+
 }
 
 .box {
     display:inline-block;
-    text-align: center;
+    text-align: ;
     overflow: auto;
     word-break: break-word;
     border: 0.5px solid #c1bfba;
-    margin: 4%;
-    width: 190px; 
-    height: 270px;
+    width: 35%; 
+    height: 18%;
     border-radius: 10px;
     color: #040730;
+       overflow-x: hidden;
+    overflow-y: hidden;
+    margin-bottom: 5%;
+}
+.box:not(:first-child):not(:last-child) {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.arrow-container {visibility: hidden;}.arrow {visibility: hidden;}.arrow.hidden {visibility: hidden;}
+
+.text-reveal {
+  visibility: hidden;
+}
+
+.arrow-container:hover .arrow {
+visibility: hidden;
+}
+
+.arrow-container:hover .text-reveal {
+visibility: hidden;
+}
+
+.arrow-container:hover .arrow.hidden {
+  visibility: hidden;
+}
+
+
+.app-blockd1-part {
+  justify-content: center;
+  background-color: #fff;
+  border: 0.5px solid #c1bfba;
+  color: #040730;
+  margin: 0 5% 0 5%;
+  border-radius: 10px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  }
+  .app-blockd1-part::-webkit-scrollbar {
+        display: none;
+    }
+
+.app-blockd1-text-part{
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 
@@ -757,16 +813,17 @@ margin-top: 11px;
 #App{
   display: block;
 text-align: center;
-margin-left: 1%;
-margin-right: 1%;
+margin-left: 5%;
+margin-right: 5%;
 margin-bottom: 10%;
+margin-top: 5%;
 }
 .app-blockd1 {
   justify-content: center;
   background-color: #fff;
   border: 0.5px solid #c1bfba;
   color: #040730;
-  margin: 1%;
+  margin: 0%;
   text-align: center;
   border-radius: 10px;
   padding-top: 1%;
@@ -801,10 +858,11 @@ margin-bottom: 10%;
 #Projets1{
   display: block;
 text-align: center;
-margin-left: 1%;
-margin-right: 1%;
+margin-left: 5%;
+margin-right: 5%;
 margin-top: 5%;
 }
+
 
 
 .box-Projets {
