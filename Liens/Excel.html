@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Excel</title>
+  <link rel="shortcut icon" href="Elements/logo.png" type="image/x-icon">
+</head>
+<style type="text/css">
+  body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+color: #333333;
+background-color: #f2f2eb;
+}
+
+h2{
+font-size: 170%;
+font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+color: #000000;
+  /* La marge en haut et en bas de l'élément h1 est fixée à 16 pixels */
+margin-left: 40px;
+/* La taille de la police est fixée à 24 pixels */
+}
+
+.b { 
+  position: relative;
+  margin-top: 5%;
+  text-align: center; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
+  font-size: 110%; 
+  /* 2% of the viewport width */ 
+}
+.b2 {
+  position: relative; 
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
+  font-size: 90%; 
+  text-align: justify; 
+}
+
+
+#Projets1{
+  display: block;
+text-align: center;
+margin-left: 3%;
+margin-right: 3%;
+margin-top: 5%;
+}
+
+
+.box-Projets {
+    display:inline-block;
+    text-align: left;
+    overflow: auto;
+    word-break: break-word;
+    margin: 1%;
+    width: 300px; 
+    height: 350px;
+    border-radius: 10px;
+    color: black;
+    border: 0.5px solid #c1bfba;    
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+  }
+  .box-Projets::-webkit-scrollbar {
+        display: none;
+    }
+
+.app-blockd1 {
+  justify-content: center;
+  background-color: #fff;
+  border: 0.5px solid #c1bfba;
+  color: black;
+  margin: 2%;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+.app-blockd1-text {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-app {
+height: auto;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.box-app-int {
+    position: relative;
+    text-align: none;
+    overflow: auto;
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 70%; 
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.color-app-int {
+    background-color: #fff; /* couleur de fond du premier carré */
+}
+.exit{
+            position: absolute;
+            text-decoration: none;
+            top: 2%;
+            margin-left: 2%;
+            padding: 12px 20px;
+            background-color: #1D3C6F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .exit:hover {
+          background: #C0D6DF;
+  color: black;
+        }
+
+</style>
+<body>
+  <a href="#" onclick="javascript:window.history.back(); window.scrollTo(0, window.pageYOffset);" class="exit">Revenir</a>
+<div id="Projets1">
+  <div class="app-blockd1">
+    <h2 class="app-blockd1-text">Excel</h2>
+    <div class="box-Projets color-app">
+      <div class="b">Tableur</div>
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="Images/excel-table.png" class="img-app">
+          </a>
+      </div>
+      <div class="b2">Je maîtrise l'outil de tableur et je suis capable de mettre en place des formules pour optimiser les données et rendre les tableaux plus efficaces.</div>
+    </div>
+    <div class="box-Projets color-app">
+      <div class="b">Graphiques</div>
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="Images/excel-graph.png" class="img-app">
+          </a>
+      </div>
+      <div class="b2">Je suis capable de créer des graphiques professionnels et d'utiliser différents modèles pour représenter efficacement les données.</div>
+    </div>
+     <div class="box-Projets color-app">
+      <div class="b">Tableau croisés dynamique</div>
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+            <img src="Images/excel-dyn.png" class="img-app">
+          </a>
+      </div>
+      <div class="b2">J'apprend et je comprend comment utiliser les tableaux croisés dynamiques, en utilisant différentes types de données.</div>
+    </div>
+     <div class="box-Projets color-app">
+      <div class="b">Code VBA</div>
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container">
+              <img src="Images/excel-vba.png" class="img-app">
+          </a>
+      </div>
+      <div class="b2">J'ai écrit des applications VBA pour automatiser certaines tâches dans Excel, y compris des jeux et des outils pour intégrer des données extérieures aux tableaux.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
