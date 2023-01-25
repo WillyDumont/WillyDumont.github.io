@@ -867,15 +867,15 @@ border-radius: 11px;
   /* styles spécifiques pour les telephones */
 
 .sample-header {
-  margin: 1%;
+  margin: 5%;
   border: 0.5px solid #c1bfba;
   left: 0;
   top: 0;
-  width: 98%;
+  width: 90%;
   background-position: 70%;
   background-size: 230%;
   background-repeat: no-repeat;
-  height : 50%;
+  height : 40%;
 }
 
 .sample-header-section {
@@ -892,22 +892,26 @@ border-radius: 11px;
   position: absolute;
   top: 35%;
   left: 5%;
-  font-size: 150%;
+  font-size: 130%;
 }
 .niveau1 {
   position: absolute;
-  padding: 0;
-  margin-left: 25%;
-  margin-right: 10%;
-  margin-top: 15%;
+  display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30%;
+  width: 100%;
   text-align: center;
-  font-size: 130%;
+  font-size: 100%;
 }
 
 .niveau1 li {
   list-style: none;
   border-radius: 10px;
-  margin: 4%;
+  margin: 2%;
   display: inline-block;
 }
 
