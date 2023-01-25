@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="C:\Users\willy\Documents\Site web\Elements\logo.png" type="image/x-icon">
+<title>Publier</title>
+ <body>
+  <style type="text/css">
+  
+body {
+
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+color: #333333;
+background-color: #f2f2eb;
+}
+/*
+.frame {
+width: 30%;
+height: 70%;
+margin: 2% 2%;
+border: 0.5px solid #c1bfba;
+border-radius: 10px;
+padding: 20px;
+background-color: #fff;
+}
+.inner-frame {
+  width: 80%;
+  height: 180px;
+  background-color: #f2f2eb;
+  margin: 5% auto;
+  border: 0.5px solid #c1bfba;
+  border-radius: 10px;
+  padding: 20px;
+}
+.top{
+      display: block;
+  text-decoration: none;
+  text-align: center;
+}
+.info{
+    display: block;
+  text-decoration: none;
+  font-size: 70%;
+  text-align: center;
+  margin-top: 0;
+  padding-bottom: 5%;
+}
+
+.ball {
+    display: none;
+    width: 142.5px;
+    height: 82.5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px #888;
+    font-size: 80%;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+button {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: #1D3C6F;
+    color: white;
+    padding: 5% 30%;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0.5px solid #c1bfba;
+}
+.back{
+  font-size: 100%;
+  text-align: center;
+  margin-top: 5%;
+}
+a.back {
+  display: block; 
+  text-decoration: none;
+}
+.back:hover {
+  color: #1D3C6F;
+
+}
+*/
+ .exit{
+            position: absolute;
+            text-decoration: none;
+            top: 2%;
+            margin-left: 2%;
+            padding: 12px 20px;
+            background-color: #1D3C6F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .exit:hover {
+        background: #C0D6DF;
+        color: black;
+        }
+.Text{
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%)translateY(-50%);
+}
+
+</style>
+<div class="Text">Cette section est en préparation</div>
+<a href="#" onclick="javascript:window.history.back(); window.scrollTo(0, window.pageYOffset);" class="exit">Revenir</a>
+<!--
+<div class="frame">
+  <div class="inner-frame">
+    <form>
+      <div class="message-container">
+        <label for="message"><a class="top">Écrivez moi et participer à mon mur</a></label>
+        <textarea id="message" style="margin-left: 50%; transform: translateX(-50%);"></textarea>
+      </div>
+      <a class="info">(Nom - Prenom - Message - Date)</a>
+        <button type="button" onclick="createNewMessage()">Envoyer</button>
+        <a href="#" onclick="javascript:window.history.back(); window.scrollTo(0, window.pageYOffset);" class="back">Retour</a>
+    </form>
+    <br>
+    <div class="ball"></div>
+  </div>
+</div>
+-->
+</body>
+
+
+  <script> 
+function createNewMessage() {
+  var message = document.getElementById("message").value;
+  var newBall = document.createElement("div");
+  newBall.classList.add("ball");
+  newBall.innerHTML = '<p>'+ message +'</p>';
+  newBall.style.display = 'block';
+  document.body.appendChild(newBall);
+
+  var shiftX, shiftY;
+
+  newBall.onmousedown = function(event) {
+    // (1) la préparer au déplacement :  réglé en absolute et en haut par z-index
+    newBall.style.position = 'absolute';
+    newBall.style.zIndex = 1000;
+
+    // déplacez-le de tout parent actuel directement dans body
+    // pour le placer par rapport à body
+    document.body.append(newBall);
+
+    // Centrer la balle aux coordonnées (pageX, pageY)
+    function moveAt(pageX, pageY) {
+      newBall.style.left = pageX - newBall.offsetWidth / 2 + 'px';
+      newBall.style.top = pageY - newBall.offsetHeight / 2 + 'px';
+    }
+
+    // obtenir les valeurs de décalage entre le coin supérieur gauche de la balle et le pointeur de la souris
+    shiftX = event.pageX - newBall.getBoundingClientRect().left - window.pageXOffset;
+    shiftY = event.pageY - newBall.getBoundingClientRect().top - window.pageYOffset;
+
+    // déplacer la balle sous le pointeur de la souris
+    moveAt(event.pageX, event.pageY);
+
+    function onMouseMove(event) {
+      moveAt(event.pageX, event.pageY);
+    }
+
+    // écouter les mouvements de la souris
+    document.addEventListener('mousemove', onMouseMove);
+
+    // écouter le relâchement du bouton de la souris
+    newBall.onmouseup = function() {
+      document.removeEventListener('mousemove', onMouseMove);
+      newBall.onmouseup = null;
+    };
+
+        // get the last position from local storage
+        var lastX = localStorage.getItem('lastX');
+        var lastY = localStorage.getItem('lastY');
+        if(lastX && lastY) {
+            moveAt(lastX, lastY);
+        }
+        else {
+            // déplacer notre balle en positionnement absolu sous le pointeur
+            moveAt(event.pageX, event.pageY);
+        }
+
+        function onMouseMove(event) {
+          moveAt(event.pageX, event.pageY);
+        }
+
+        // (2) déplacer la balle sur le déplacement de la souris
+        document.addEventListener('mousemove', onMouseMove);
+
+        // (3) laisser tomber la balle, retirer les gestionnaires inutiles
+        newBall.onmouseup = function() {
+          document.removeEventListener('mousemove', onMouseMove);
+          // store the current position in local storage
+          localStorage.setItem('lastX', event.pageX);
+          localStorage.setItem('lastY', event.pageY);
+          newBall.onmouseup = null;
+        };
+      };
+    }
+  </script>
+</body>
