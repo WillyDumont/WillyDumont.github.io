@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ted Talks</title>
+  <link rel="shortcut icon" href="Elements/logo.png" type="image/x-icon">
+</head>
+<style type="text/css">
+  body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+color: #333333;
+background-color: #f2f2eb;
+}
+
+h2{
+font-size: 170%;
+font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+color: #000000;
+  /* La marge en haut et en bas de l'élément h1 est fixée à 16 pixels */
+margin-left: 40px;
+/* La taille de la police est fixée à 24 pixels */
+}
+
+.b { 
+  position: relative;
+  margin-top: 5%;
+  text-align: center; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
+  font-size: 110%; 
+  /* 2% of the viewport width */ 
+}
+.b2 {
+  position: relative; 
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
+  font-size: 90%; 
+  text-align: justify; 
+}
+
+
+#Projets1{
+  display: block;
+text-align: center;
+margin-left: 3%;
+margin-right: 3%;
+margin-top: 5%;
+}
+
+
+.box-Projets {
+    display:inline-block;
+    text-align: left;
+    overflow: auto;
+    word-break: break-word;
+    margin: 1%;
+    width: 300px; 
+    height: 300px;
+    border-radius: 10px;
+    color: black;
+    border: 0.5px solid #c1bfba;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+  }
+  .box-Projets::-webkit-scrollbar {
+        display: none;
+    }
+.app-blockd1 {
+  justify-content: center;
+  background-color: #fff;
+  border: 0.5px solid #c1bfba;
+  color: black;
+  margin: 2%;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+
+.app-blockd1-text {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-app {
+height: auto;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.box-app-int {
+    position: relative;
+    text-align: none;
+    overflow: auto;
+    margin: 5%;
+    width: 90%; 
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.color-app-int {
+    background-color: #fff; /* couleur de fond du premier carré */
+}
+.exit{
+            position: absolute;
+            text-decoration: none;
+            top: 2%;
+            margin-left: 2%;
+            padding: 12px 20px;
+            background-color: #1D3C6F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .exit:hover {
+          background: #C0D6DF;
+  color: black;
+        }
+
+</style>
+<body>
+  <a href="#" onclick="javascript:window.history.back(); window.scrollTo(0, window.pageYOffset);" class="exit">Revenir</a>
+<div id="Projets1">
+  <div class="app-blockd1">
+    <h2 class="app-blockd1-text">Ted Talks</h2>
+    <div class="box-Projets color-app">
+      <div class="b">Comment les grands leaders inspirent l’action</div>
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container" href="https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action?referrer=playlist-the_most_popular_talks_of_all&language=fr" target="_blank">
+            <img src="Images/ted-sim.png"  class="img-app mon-bouton-app2" >
+          </a>
+      </div>
+      <div class="b2">Ce TED Talk m'a inspiré, il est le plus complet, le plus inspirant et le plus impactant que j'ai jamais vu. Il permet de réfléchir et d'avoir du recul sur des sujets importants. Je vous invite a le visionner.</div>
+    </div>
+    <div class="box-Projets color-app">
+      <div class="b">La surpenante science de la motivation</div>
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container" target="_blank"  href="https://www.ted.com/talks/dan_pink_the_puzzle_of_motivation?referrer=playlist-the_most_popular_talks_of_all&language=fr">
+            <img src="Images/ted-2.png" class="img-app mon-bouton-app2">
+          </a>
+      </div>
+      <div class="b2">Ce TED Talk sur la science de la motivation est rempli de bons conseils et présenté par un conférencier qui s'exprime clairement. Il m'a aidé à comprendre les mécanismes de la motivation et à trouver des moyens de m'auto-motiver. Je vous recommande vivement de l'écouter.</div>
+    </div>
+     <div class="box-Projets color-app">
+      <div class="b">Dans la tête d'un champion de la procrastination</div>
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container" target="_blank"  href="https://www.ted.com/talks/tim_urban_inside_the_mind_of_a_master_procrastinator">
+            <img src="Images/ted-3.png" class="img-app mon-bouton-app2">
+          </a>
+      </div>
+      <div class="b2">Ce TED Talk est particulièrement amusant, il aborde le sujet de la procrastination avec humour et apporte beaucoup de réponses à mes propres questions. Je vous recommande de le regarder si vous avez des problèmes de procrastination ou si vous voulez simplement vous amuser.</div>
+    </div>
+     <div class="box-Projets color-app">
+      <div class="b">Comment les inégalitées économiques déséquilibre les sociétées</div>
+      <div class="box-app-int color-app-int">
+          <a class="img-app-container" href="https://www.ted.com/talks/richard_wilkinson_how_economic_inequality_harms_societies" target="_blank">
+              <img src="Images/ted-4.png" class="img-app mon-bouton-app2">
+          </a>
+      </div>
+      <div class="b2">Ce TED Talk soulève de nombreuses interrogations sur la manière dont notre économie est gérée et pose les bonnes questions pour aller chercher des informations complémentaires. Il m'a aidé à comprendre les mécanismes économiques et à réfléchir aux implications de certaines décisions économiques.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
