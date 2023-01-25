@@ -593,6 +593,8 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
 .footer_ul2_amrc li a:hover { text-decoration:none;}
 .footer_ul2_amrc li i { margin-top:5px;}
 .bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+
+
 @media screen and (max-width: 800px) {
   /* styles spécifiques pour les telephones */
 
@@ -684,6 +686,9 @@ p {
   text-align: justify;
   font-size: 85%; /* 2% of the viewport width */
 }
+a {
+  font-size: 85%;
+}
 .espace{
   margin-top: -10%;
 }
@@ -717,22 +722,23 @@ p {
 }
 .b2 {
   position: relative; 
-  margin-top: 20%;
+  margin-top: 27%;
   margin-left: 3%;
   margin-right: 3%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
-  font-size: 65%; 
+  font-size: 85%; 
   text-align: justify; 
 }
 .b2-av {
   position: relative; 
-  margin-top: 7%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-top: 27%;
+  margin-left: 3%;
+  margin-right: 3%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
-  font-size: 65%; 
+  font-size: 85%; 
   text-align: justify; 
 }
+
 /*------------------BODY--------------------*/
 
 #d1{
@@ -785,6 +791,9 @@ visibility: hidden;
   visibility: hidden;
 }
 
+.ecran{
+  margin-top: 10%;
+}
 
 .app-blockd1-part {
   justify-content: center;
@@ -815,7 +824,7 @@ visibility: hidden;
 text-align: center;
 margin-left: 5%;
 margin-right: 5%;
-margin-bottom: 10%;
+margin-bottom: 5%;
 margin-top: 5%;
 }
 .app-blockd1 {
@@ -827,21 +836,23 @@ margin-top: 5%;
   text-align: center;
   border-radius: 10px;
   padding-top: 1%;
-  padding-bottom: 5%;
-  margin-bottom: 10%;
+  padding-bottom: 0%;
+  margin-bottom: 5%;
 }
 .app-blockd1-text {
   margin-left: 50%;
   transform: translateX(-50%);
+  margin-top: 2%;
 }
 .box-app {
     display:inline-block;
     text-align: left;
     overflow: auto;
     word-break: break-word;
-    margin: 0.5%;
-    width: 175px; 
-    height: 200px;
+    margin: 0% 5% 5% 5%;
+    width: auto; 
+    height: auto;
+    padding-bottom: 3%;
     border-radius: 10px;
     color: #040730;
     border: 0.5px solid #c1bfba;
@@ -864,18 +875,22 @@ margin-top: 5%;
 }
 
 
-
 .box-Projets {
     display:inline-block;
     text-align: left;
     overflow: auto;
     word-break: break-word;
-    margin: 1%;
-    width: 170px; 
-    height: 170px;
+    margin: 0% 5% 5% 5%;
+    width: auto; 
+    height: auto;
+    padding-bottom: 3%;
     border-radius: 10px;
     color: #040730;
     border: 0.5px solid #c1bfba;
+    overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
   }
 
 .img-app {
@@ -908,20 +923,15 @@ border: 0.5px solid #c1bfba;
 border-radius: 11px;
 }
 
-.custom-loading-spinner {
-    cursor: progress;
-    display: none;
-  }
 
 /*-------------------IMAGES---------------------*/
-
 
 .album {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
-    margin-left: 1%; 
-    margin-right: 1%; 
+    margin-top: 5%;
+    margin-left: 0%; 
+    margin-right: 0%; 
     justify-content: center;
 }
 .photo {
@@ -942,16 +952,15 @@ border-radius: 11px;
 .img-block {
     display: flex;
   align-items: center;
-  justify-content: center;
   background-color: #152555;
   color: #fff;
-  width: 40%; /* Remplacer 15% par 20% pour adapter à la taille de l'écran */
-  margin: 1%; /* Remplacer margin-block: 0.5%; margin-left: 1%;  par margin: 1% pour simplifier */
+  width: 85%;
+  margin: 7.5% 7.5% 5% 5%; 
   border-radius: 10px;
-  margin: 3% 0 5% 0;
-  text-align: center; 
+  margin: 0% 0 0% 0;
+  text-align: left; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
-  font-size: 90%;
+  font-size: 85%;
 }
 .img-block2 {
   background-color: #152555;
