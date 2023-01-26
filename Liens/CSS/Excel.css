@@ -116,16 +116,17 @@ align-items: center;
           background: #C0D6DF;
   color: black;
         }
-@media screen and (max-width: 800px) {
-  
-   body {
+@media screen and (max-width: 1000px) {
+  /* styles spécifiques pour les telephones */
+
+  body {
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 color: #333333;
 background-color: #f2f2eb;
 }
 
 h2{
-font-size: 150%;
+font-size: 180%;
 font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 color: #000000;
   /* La marge en haut et en bas de l'élément h1 est fixée à 16 pixels */
@@ -138,7 +139,7 @@ margin-left: 40px;
   margin-top: 5%;
   text-align: center; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
-  font-size: 110%; 
+  font-size: 140%; 
   /* 2% of the viewport width */ 
 }
 .b2 {
@@ -147,7 +148,7 @@ margin-left: 40px;
   margin-left: 5%;
   margin-right: 5%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
-  font-size: 85%; 
+  font-size: 110%; 
   text-align: justify; 
 }
 
@@ -157,7 +158,7 @@ margin-left: 40px;
 text-align: center;
 margin-left: 5%;
 margin-right: 5%;
-margin-top: 8%;
+margin-top: 7%;
 }
 
 
@@ -167,9 +168,8 @@ margin-top: 8%;
     overflow: auto;
     word-break: break-word;
     margin: 1%;
-    width: 85%; 
+    width: 90%; 
     height: auto;
-    background-color:#f2f2eb ;
     padding-bottom: 3%;
     border-radius: 10px;
     color: black;
@@ -233,14 +233,12 @@ align-items: center;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-
         }
         .exit:hover {
           background: #C0D6DF;
   color: black;
         }
 }
-
   
   
   
