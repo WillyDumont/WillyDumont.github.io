@@ -102,5 +102,9 @@ button {
             background: #C0D6DF;
             color: black;
         }
-    }
+@media screen and (max-width: 800px) {
+
+
+
+
 }
