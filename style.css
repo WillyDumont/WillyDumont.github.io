@@ -251,7 +251,7 @@ margin-right: 8%;
     border-radius: 10px;
     color: #040730;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
   }
