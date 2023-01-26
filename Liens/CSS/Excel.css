@@ -116,6 +116,9 @@ align-items: center;
           background: #C0D6DF;
   color: black;
         }
+
+
+
 @media screen and (max-width: 1000px) {
   /* styles spécifiques pour les telephones */
 
@@ -239,7 +242,3 @@ align-items: center;
   color: black;
         }
 }
-  
-  
-  
-  
